@@ -1,0 +1,20 @@
+# PHP Exposure & Runtime Remediation Radar
+> Last updated: 2026-10-22T07:10:30.733802+00:00 UTC | Machine Ground-Truth for AI Coding Agents
+> Addresses critical unauthenticated core RCEs (PHP2Shell: CVE-2026-109618, CVE-2026-109619, CVE-2024-4577).
+
+## Active PHP Runtime Exposure Matrix
+| Branch | Current Version | EOL Status | Vulnerable (PHP2Shell) | Minimum Safe Version | Directive | Action |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **PHP 8.1** | `8.1.31` | YES (UNPATCHABLE) | CRITICAL (YES) | `None (Requires Branch Upgrade)` | `ISOLATE_EOL_RUNTIME` | PHP 8.1 is End-Of-Life and unpatchable. Immediately upgrade runtime to PHP 8.2+ or isolate container network access. |
+| **PHP 8.0** | `8.0.30` | YES (UNPATCHABLE) | CRITICAL (YES) | `None (Requires Branch Upgrade)` | `ISOLATE_EOL_RUNTIME` | PHP 8.0 is End-Of-Life and unpatchable. Immediately upgrade runtime to PHP 8.2+ or isolate container network access. |
+| **PHP 7.4** | `7.4.33` | YES (UNPATCHABLE) | CRITICAL (YES) | `None (Requires Branch Upgrade)` | `ISOLATE_EOL_RUNTIME` | PHP 7.4 is End-Of-Life and unpatchable. Immediately upgrade runtime to PHP 8.2+ or isolate container network access. |
+| **PHP 5.6** | `5.6.40` | YES (UNPATCHABLE) | CRITICAL (YES) | `None (Requires Branch Upgrade)` | `ISOLATE_EOL_RUNTIME` | PHP 5.6 is End-Of-Life and unpatchable. Immediately upgrade runtime to PHP 8.2+ or isolate container network access. |
+| **PHP 8.5** | `8.5.12` | Active | No (Patched) | `8.5.12` | `UP_TO_DATE` | PHP 8.5 is patched against PHP2Shell and CGI injection. Runtime is up to date. |
+| **PHP 8.4** | `8.4.27` | Active | No (Patched) | `8.4.27` | `UP_TO_DATE` | PHP 8.4 is patched against PHP2Shell and CGI injection. Runtime is up to date. |
+| **PHP 8.3** | `8.3.36` | Active | No (Patched) | `8.3.36` | `UP_TO_DATE` | PHP 8.3 is patched against PHP2Shell and CGI injection. Runtime is up to date. |
+| **PHP 8.2** | `8.2.35` | Active | No (Patched) | `8.2.35` | `UP_TO_DATE` | PHP 8.2 is patched against PHP2Shell and CGI injection. Runtime is up to date. |
+
+## Critical Threat Intelligence Briefing
+- **PHP2Shell (CVE-2026-109618 & CVE-2026-109619)**: Memory corruption in core request initialization and use-after-free in worker memory.
+- **Affected Scope**: Any server running PHP 5.4 through 8.5.11.
+- **Remediation**: Upgrade immediately to PHP 8.2.35+, 8.3.36+, 8.4.27+, or 8.5.12+. EOL versions (8.1, 8.0, 7.x, 5.x) will never receive official vendor patches and must be isolated behind strict WAF/reverse proxy rules or container boundaries.
