@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-10-25T04:59:54.018968+00:00",
+    "generated_at_utc": "2026-10-25T11:51:28.295345+00:00",
     "schema_version": "1.0.0",
     "target_ecosystem": "PHP Core & Packagist",
     "critical_advisory": "PHP2Shell (CVE-2026-109618, CVE-2026-109619)",
