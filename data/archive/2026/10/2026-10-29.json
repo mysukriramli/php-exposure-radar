@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "generated_at_utc": "2026-10-29T06:05:20.440136+00:00",
+    "schema_version": "1.0.0",
+    "target_ecosystem": "PHP Core & Packagist",
+    "critical_advisory": "PHP2Shell (CVE-2026-109618, CVE-2026-109619)",
+    "upstream_authorities": [
+      "The PHP Foundation",
+      "php.net",
+      "ENISA",
+      "CISA"
+    ]
+  },
+  "vulnerability_catalog": [
+    {
+      "cve_id": "CVE-2026-109618",
+      "name": "PHP2Shell - Out-Of-Memory Request State Corruption RCE",
+      "cvss_score": 9.2,
+      "affected_versions": "5.4.0 <= PHP <= 8.5.11",
+      "patched_versions": "8.5.12, 8.4.27, 8.3.36, 8.2.35 (EOL branches unpatched)",
+      "rce_vector": "Unauthenticated remote code execution via longjmp() OOM control flow corruption in core engine"
+    },
+    {
+      "cve_id": "CVE-2026-109619",
+      "name": "PHP2Shell - Cross-Request Use-After-Free RCE",
+      "cvss_score": 9.2,
+      "affected_versions": "5.4.0 <= PHP <= 8.5.11",
+      "patched_versions": "8.5.12, 8.4.27, 8.3.36, 8.2.35 (EOL branches unpatched)",
+      "rce_vector": "Unauthenticated remote code execution via stale global request memory reuse in worker threads"
+    },
+    {
+      "cve_id": "CVE-2024-4577",
+      "name": "PHP CGI Argument Injection RCE",
+      "cvss_score": 9.8,
+      "affected_versions": "PHP 8.0, 8.1, 8.2 < 8.2.20, 8.3 < 8.3.8",
+      "patched_versions": "8.2.20, 8.3.8",
+      "rce_vector": "Best-fit character encoding bypass in Windows CGI wrapper enabling arbitrary argument execution"
+    }
+  ],
+  "runtime_exposure_matrix": [
+    {
+      "branch": "8.1",
+      "latest_version": "8.1.31",
+      "is_eol": true,
+      "is_vulnerable_to_php2shell": true,
+      "is_vulnerable_to_cgi_injection": true,
+      "minimum_patched_version": null,
+      "exposure_score": 100.0,
+      "directive": "ISOLATE_EOL_RUNTIME",
+      "recommended_action": "PHP 8.1 is End-Of-Life and unpatchable. Immediately upgrade runtime to PHP 8.2+ or isolate container network access.",
+      "active_cves": [
+        "CVE-2026-109618",
+        "CVE-2026-109619",
+        "CVE-2024-4577"
+      ]
+    },
+    {
+      "branch": "8.0",
+      "latest_version": "8.0.30",
+      "is_eol": true,
+      "is_vulnerable_to_php2shell": true,
+      "is_vulnerable_to_cgi_injection": true,
+      "minimum_patched_version": null,
+      "exposure_score": 100.0,
+      "directive": "ISOLATE_EOL_RUNTIME",
+      "recommended_action": "PHP 8.0 is End-Of-Life and unpatchable. Immediately upgrade runtime to PHP 8.2+ or isolate container network access.",
+      "active_cves": [
+        "CVE-2026-109618",
+        "CVE-2026-109619",
+        "CVE-2024-4577"
+      ]
+    },
+    {
+      "branch": "7.4",
+      "latest_version": "7.4.33",
+      "is_eol": true,
+      "is_vulnerable_to_php2shell": true,
+      "is_vulnerable_to_cgi_injection": true,
+      "minimum_patched_version": null,
+      "exposure_score": 100.0,
+      "directive": "ISOLATE_EOL_RUNTIME",
+      "recommended_action": "PHP 7.4 is End-Of-Life and unpatchable. Immediately upgrade runtime to PHP 8.2+ or isolate container network access.",
+      "active_cves": [
+        "CVE-2026-109618",
+        "CVE-2026-109619",
+        "CVE-2024-4577"
+      ]
+    },
+    {
+      "branch": "5.6",
+      "latest_version": "5.6.40",
+      "is_eol": true,
+      "is_vulnerable_to_php2shell": true,
+      "is_vulnerable_to_cgi_injection": true,
+      "minimum_patched_version": null,
+      "exposure_score": 100.0,
+      "directive": "ISOLATE_EOL_RUNTIME",
+      "recommended_action": "PHP 5.6 is End-Of-Life and unpatchable. Immediately upgrade runtime to PHP 8.2+ or isolate container network access.",
+      "active_cves": [
+        "CVE-2026-109618",
+        "CVE-2026-109619",
+        "CVE-2024-4577"
+      ]
+    },
+    {
+      "branch": "8.5",
+      "latest_version": "8.5.12",
+      "is_eol": false,
+      "is_vulnerable_to_php2shell": false,
+      "is_vulnerable_to_cgi_injection": false,
+      "minimum_patched_version": "8.5.12",
+      "exposure_score": 0.0,
+      "directive": "UP_TO_DATE",
+      "recommended_action": "PHP 8.5 is patched against PHP2Shell and CGI injection. Runtime is up to date.",
+      "active_cves": []
+    },
+    {
+      "branch": "8.4",
+      "latest_version": "8.4.27",
+      "is_eol": false,
+      "is_vulnerable_to_php2shell": false,
+      "is_vulnerable_to_cgi_injection": false,
+      "minimum_patched_version": "8.4.27",
+      "exposure_score": 0.0,
+      "directive": "UP_TO_DATE",
+      "recommended_action": "PHP 8.4 is patched against PHP2Shell and CGI injection. Runtime is up to date.",
+      "active_cves": []
+    },
+    {
+      "branch": "8.3",
+      "latest_version": "8.3.36",
+      "is_eol": false,
+      "is_vulnerable_to_php2shell": false,
+      "is_vulnerable_to_cgi_injection": false,
+      "minimum_patched_version": "8.3.36",
+      "exposure_score": 0.0,
+      "directive": "UP_TO_DATE",
+      "recommended_action": "PHP 8.3 is patched against PHP2Shell and CGI injection. Runtime is up to date.",
+      "active_cves": []
+    },
+    {
+      "branch": "8.2",
+      "latest_version": "8.2.35",
+      "is_eol": false,
+      "is_vulnerable_to_php2shell": false,
+      "is_vulnerable_to_cgi_injection": false,
+      "minimum_patched_version": "8.2.35",
+      "exposure_score": 0.0,
+      "directive": "UP_TO_DATE",
+      "recommended_action": "PHP 8.2 is patched against PHP2Shell and CGI injection. Runtime is up to date.",
+      "active_cves": []
+    }
+  ]
+}
