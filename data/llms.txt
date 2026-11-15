@@ -1,5 +1,5 @@
 # PHP Exposure & Runtime Remediation Radar
-> Last updated: 2026-11-14T22:38:03.256410+00:00 UTC | Machine Ground-Truth for AI Coding Agents
+> Last updated: 2026-11-15T06:53:23.117723+00:00 UTC | Machine Ground-Truth for AI Coding Agents
 > Addresses critical unauthenticated core RCEs (PHP2Shell: CVE-2026-109618, CVE-2026-109619, CVE-2024-4577).
 
 ## Active PHP Runtime Exposure Matrix
