@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-11-19T07:41:56.678169+00:00",
+    "generated_at_utc": "2026-11-19T20:51:27.243606+00:00",
     "schema_version": "1.0.0",
     "target_ecosystem": "PHP Core & Packagist",
     "critical_advisory": "PHP2Shell (CVE-2026-109618, CVE-2026-109619)",
@@ -104,7 +104,7 @@
     },
     {
       "branch": "8.5",
-      "latest_version": "8.5.12",
+      "latest_version": "8.5.13",
       "is_eol": false,
       "is_vulnerable_to_php2shell": false,
       "is_vulnerable_to_cgi_injection": false,
@@ -116,7 +116,7 @@
     },
     {
       "branch": "8.4",
-      "latest_version": "8.4.27",
+      "latest_version": "8.4.28",
       "is_eol": false,
       "is_vulnerable_to_php2shell": false,
       "is_vulnerable_to_cgi_injection": false,
@@ -128,7 +128,7 @@
     },
     {
       "branch": "8.3",
-      "latest_version": "8.3.36",
+      "latest_version": "8.3.37",
       "is_eol": false,
       "is_vulnerable_to_php2shell": false,
       "is_vulnerable_to_cgi_injection": false,
@@ -140,7 +140,7 @@
     },
     {
       "branch": "8.2",
-      "latest_version": "8.2.35",
+      "latest_version": "8.2.36",
       "is_eol": false,
       "is_vulnerable_to_php2shell": false,
       "is_vulnerable_to_cgi_injection": false,
